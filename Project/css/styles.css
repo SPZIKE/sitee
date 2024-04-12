@@ -1,0 +1,325 @@
+
+/* TEMPLATE */
+/* BODY */
+body{
+    background-color: rgb(163, 152, 130);
+}   
+
+
+/* HORIZONTAL 1 */
+.horizontal_1 a {
+  color: goldenrod;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+
+
+.horizontal_1 {
+  background-color: #1a1f41;
+}
+
+
+
+.horizontal_1 a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+
+/* HORIZONTAL 2 */
+.horizontal_2 a {
+  color: goldenrod;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+
+.horizontal_2 {
+  background-color: #1a1f41;
+}
+
+
+
+
+/* FOOTER */
+footer{
+	background-color: #1a1f41;
+}
+
+
+
+
+
+/* FOOTER */
+footer::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+footer h1{
+	color: goldenrod;
+	font-size: 1.2em;
+	font-weight: normal;
+}
+
+
+footer a{
+	color: goldenrod;
+}
+
+section#contactInfo p, address{
+	line-height: 1.6em;
+	font-style: normal;
+  color: goldenrod;
+}
+
+a{
+  color: #1a1f41;
+}
+
+
+/* HOME */
+#index{
+  background-color: #1a1f41;
+}
+
+
+#leftSide{
+  background-color: #1a1f41;
+}
+
+#leftSide > p{
+	color: goldenrod;
+}
+
+
+#rightSide1 li{
+  text-align: center;
+  background-color: goldenrod;
+}
+
+blockquote {
+  float: left;
+  color: #1a1f41;
+}
+
+
+
+
+/* PRODUCTS */
+
+#sclass{
+  color: #1a1f41;
+  background-color: goldenrod;;
+}
+
+#supra{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+#gmc{
+  background-color:goldenrod ;
+  color: #1a1f41;
+}
+
+#volks{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+#rolls{
+  background-color:goldenrod ;
+  color: #1a1f41;
+}
+
+
+#pana{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+#patrol{
+  background-color:goldenrod ;
+  color: #1a1f41;
+}
+
+
+#hilux{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+
+#turbo{
+  background-color:goldenrod ;
+  color: #1a1f41;
+}
+
+#camry{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+#cayenne{
+  background-color:goldenrod ;
+  color: #1a1f41;
+}
+
+#dodge{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+
+#ram{
+  background-color:goldenrod ;
+  color: #1a1f41;
+}
+
+
+#aston{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+
+
+#lambo{
+  background-color:goldenrod ;
+  color: #1a1f41 ;
+}
+
+
+/* 4door */
+
+
+#dsclass{
+  background-color:goldenrod ;
+  color: #1a1f41;
+}
+
+#dpana{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+#dcamry{
+  background-color:goldenrod ;
+  color: #1a1f41 ;
+}
+
+
+/* suv */
+
+#srolls{
+  color: #1a1f41;
+  background-color: goldenrod;
+}
+
+#spatrol{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+#scayenne{
+  background-color:goldenrod ;
+  color: #1a1f41;
+}
+
+#saston{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+
+/* pickups */
+
+
+#pgmc{
+  color: #1a1f41;
+  background-color: goldenrod;
+}
+
+
+#pvolks{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+
+#philux{
+  background-color:goldenrod ;
+  color: #1a1f41;
+}
+
+#pram{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+
+
+
+
+
+
+/* sports */
+
+#ssupra{
+  color: #1a1f41;
+  background-color: goldenrod;
+}
+
+#sturbo{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+
+#sdodge{
+  background-color:goldenrod ;
+  color: #1a1f41;
+}
+
+
+#slambo{
+  background-color:#1a1f41 ;
+  color: goldenrod;
+}
+
+
+/* subscribe */
+
+form {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+legend {
+  font-weight: bold;
+}
+
+
+#buton1 {
+  background-color: goldenrod;
+  color: #1a1f41;
+}
+
+#buton1 {
+  background-color: #d4af37;
+}
+
+
+#buton2 {
+  background-color: goldenrod;
+  color: #1a1f41;
+}
+
+#buton2 {
+  background-color: #d4af37;
+}

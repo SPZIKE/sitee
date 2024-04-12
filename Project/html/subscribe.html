@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>Car DealerShip</title>
+   <link rel="stylesheet" type="text/css" href="../css/reset.css">
+   <link rel="stylesheet" type="text/css" href="../css/layout.css">
+   <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+
+<body>
+   <header>
+   
+      <div class="horizontal_1">
+         <a href="index.html" class="logo">Luxury Autos</a>
+         <div class="horizontal_1-right">
+            <a href="index.html">Home</a>
+            <a href="../html/contact.html">Contact Us</a>
+            <a href="products.html">Cars</a>
+            <a href="../html/subscribe.html">Subscribe</a>
+         </div>
+      </div>
+    
+   <img id="logo" src="../images/LOGOS/logo.jpg" alt="">
+
+
+   <nav class="horizontal_2">
+      <ul class="row">
+         <li><a href="/html/suv.html">SUVS</a></li>
+         <li><a href="../html/4door.html">4Door</a></li>
+         <li><a href="../html/sport.html">Sport</a></li>
+         <li><a href="../html/pickup.html">PickUps</a></li>
+      </ul>
+   </nav>
+   
+</header>
+
+
+
+<main id="sub">
+ <form id="subscribeForm" action="https://sit.udst.edu.qa/processform.php" method="post" novalidate>
+         <fieldset id="user">
+            <legend>User Information</legend>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required><br>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+            <input type="checkbox" id="showPasswordCheckbox">
+            <label for="showPasswordCheckbox">Show Password</label><br>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="confirmEmail">Confirm Email Address:</label>
+            <input type="email" id="confirmEmail" name="confirmEmail" required><br>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" value="+974" required><br>
+            
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+         </fieldset>
+
+         <fieldset id="ship">
+            <legend>Shipping Address</legend>
+
+            <label for="buildingNumber">Building Number:</label>
+            <input type="number" id="buildingNumber" name="buildingNumber" required><br>
+
+            <label for="streetName">Street Name:</label>
+            <input type="text" id="streetName" name="streetName" required><br>
+            
+
+
+            <label for="city">City:</label>
+            <select id="city" name="city">
+               <option value="Doha" selected>Doha</option>
+               <option value="Al-Wakrah">Al-Wakrah</option>
+               <option value="Al-Khor">Al-Khor</option>
+            </select><br>
+
+            <label for="subscribeNewsletter">Subscribe to Newsletter:</label>
+            <input type="checkbox" id="subscribeNewsletter" name="subscribeNewsletter"><br>
+         </fieldset>
+
+         <input id="buton1" type="submit" value="Submit">
+         <input id="buton2" type="reset" value="Reset">
+      </form>
+ </form>
+</main>
+   
+   
+
+
+
+   <footer>
+      <nav class="verticalNavigation">
+         <h1>The Dealership</h1>
+         <ul>
+            <li><a href="#"><img id="fbicon" src="../images/logos/facebookicon.png" alt="" />Facebook</a></li>
+            <li><a href="#"><img id="twittericon" src="../images/logos/twittericon.png" alt="" />Twitter</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Reviews</a></li>
+         </ul>
+      </nav>
+      <nav class="verticalNavigation">
+         <h1>Car Accsesories</h1>
+         <ul>
+            <li><a href="#">Engine Oil</a></li>
+            <li><a href="#">Wiper Fluied</a></li>
+            <li><a href="#">Car Mats</a></li>
+            
+         </ul>
+      </nav>
+      <nav class="verticalNavigation">
+         <h1>Dealer Services</h1>
+         <ul>
+            <li><a href="#">Leasing</a></li>
+            <li><a href="#">Car Cleaning</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Deilvery</a></li>
+            <li><a href="#">Paint Jobs</a></li>
+         </ul>
+      </nav>
+      <section id="contactInfo">
+         <h1>Dealership Location</h1>
+         <address>Al Matar St <br />
+            C Ring Road<br />
+            Doha, Qatar </address>
+      </section>
+   </footer>
+
+   <script>
+      document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+         event.preventDefault();
+
+         if (!validateForm()) {
+            return false;
+         }
+         this.submit();
+      });
+
+      function validateForm() {
+         var fullName = document.getElementById('fullName').value;
+         var username = document.getElementById('username').value;
+         var password = document.getElementById('password').value;
+         var confirmPassword = document.getElementById('confirmPassword').value;
+         var email = document.getElementById('email').value;
+         var confirmEmail = document.getElementById('confirmEmail').value;
+         var phoneNumber = document.getElementById('phoneNumber').value;
+         var buildingNumber = document.getElementById('buildingNumber').value;
+         var street = document.getElementById('streetName').value;
+         var age = parseInt(document.getElementById('age').value);
+         var dob = new Date(document.getElementById('dob').value);
+         var currentYear = new Date().getFullYear();
+         var calculatedAge = currentYear - dob.getFullYear();
+
+         var nameRegex = /^[A-Za-z\s]+$/;
+         var passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+         var qatariPhoneNumberRegex = /^\+974\d{8}$/;
+         var streetReg = ''
+
+         if (!fullName.match(nameRegex)) {
+            alert('Please enter a valid full name.');
+            return false;
+         }
+
+         if (!username.match(nameRegex)) {
+            alert('Please enter a valid username.');
+            return false;
+         }
+
+         if (!password.match(passwordRegex)) {
+            alert('Please enter a valid password (at least 8 characters, including one letter, one number, and one special character).');
+            return false;
+         }
+
+         if (password !== confirmPassword) {
+            alert('Passwords do not match.');
+            return false;
+         }
+
+         if (!email.match(emailRegex) || !email.endsWith('.edu.qa')) {
+            alert('Please enter a valid email address ending with .edu.qa.');
+            return false;
+         }
+
+         if (email !== confirmEmail) {
+            alert('Emails do not match.');
+            return false;
+         }
+
+         if (street == streetReg) {
+            alert('Please enter a street name');
+            return false;
+         }
+
+         if (!phoneNumber.match(qatariPhoneNumberRegex)) {
+            alert('Please enter a valid Qatari phone number.');
+            return false;
+         }
+
+         if (buildingNumber < 1 || buildingNumber > 666 || isNaN(buildingNumber)) {
+            alert('Please enter a valid building number between 1 and 666.');
+            return false;
+         }
+
+         if (age < 18 || age > 100 || isNaN(age)) {
+            alert('Please enter a valid age between 18 and 100.');
+            return false;
+         }
+
+         if (age !== calculatedAge) {
+            alert('Age entered does not match the calculated age from the date of birth.');
+            return false;
+         }
+
+         return true;
+      }
+
+      window.addEventListener('load', function() {
+        var passwordField = document.getElementById('password');
+        var showPasswordCheckbox = document.getElementById('showPasswordCheckbox');
+
+        showPasswordCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        });
+    });
+   </script>
+
+
+
+
+
+</body>
+</html>

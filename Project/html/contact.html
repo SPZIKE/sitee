@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8" />
+   <title>Car DealerShip</title>
+   <link rel="stylesheet" type="text/css" href="../css/reset.css">
+   <link rel="stylesheet" type="text/css" href="../css/layout.css">
+   <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+
+<body>
+   <header>
+   
+      <div class="horizontal_1">
+         <a href="index.html" class="logo">Luxury Autos</a>
+         <div class="horizontal_1-right">
+            <a href="index.html">Home</a>
+            <a href="#">Contact Us</a>
+            <a href="products.html">Cars</a>
+            <a href="../html/subscribe.html">Subscribe</a>
+         </div>
+      </div>
+    
+   <img id="logo" src="../images/LOGOS/logo.jpg" alt="">
+
+
+   <nav class="horizontal_2">
+      <ul class="row">
+         <li><a href="/html/suv.html">SUVS</a></li>
+         <li><a href="../html/4door.html">4Door</a></li>
+         <li><a href="../html/sport.html">Sport</a></li>
+         <li><a href="../html/pickup.html">PickUps</a></li>
+      </ul>
+   </nav>
+   
+</header>
+
+
+
+<main id="contact">
+    <section id="contactInfo">
+       <h2>Contact Information</h2>
+       <p>Address: Al Matar St, C Ring Road, Doha, Qatar</p>
+       <p>Hours of Operation: Monday - Friday: 9:00 AM - 6:00 PM</p>
+       <p>Phone Number: +974-123-4567</p>
+       <p>Email: info@luxuryautos.com</p>
+    </section>
+
+    <section id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.3177822352027!2d51.481075000000004!3d25.360664000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45dcfb2722e9e9%3A0xd1b07d34e11ee6d5!2sUniversity%20of%20Doha%20for%20Science%20and%20Technology%20-%20UDST!5e0!3m2!1sen!2sqa!4v1711243191130!5m2!1sen!2sqa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="message-form">
+      <form id="contact_form" action="https://sit.udst.edu.qa/processform.php" method="post" onsubmit="return validateForm()" novalidate>
+          <fieldset>
+              <legend>Contact Us Today</legend>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name">
+
+              <label for="message">Message:</label>
+              <textarea id="message" name="message"></textarea>
+
+              <label>Contact Preference:</label>
+              <label><input type="radio" id="emailRadio" name="contact_preference" value="email" onclick="toggleContactFields()"> Email</label>
+              <label><input type="radio" id="phoneRadio" name="contact_preference" value="phone" onclick="toggleContactFields()"> Phone</label>
+
+              <div id="emailField" style="display: none;">
+                  <label for="email">Email Address:</label>
+                  <input type="email" id="email" name="email">
+              </div>
+
+              <div id="phoneField" style="display: none;">
+                  <label for="phone">Phone Number:</label>
+                  <input type="tel" id="phone" name="phone">
+              </div>
+
+              <input id="buton3" type="submit" value="Send Message">
+              <input id="buton4" type="reset" value="Reset">
+          </fieldset>
+      </form>
+    </section>
+ </main>
+   
+   
+
+
+
+   <footer>
+      <nav class="verticalNavigation">
+         <h1>The Dealership</h1>
+         <ul>
+            <li><a href="#"><img id="fbicon" src="../images/logos/facebookicon.png" alt="" />Facebook</a></li>
+            <li><a href="#"><img id="twittericon" src="../images/logos/twittericon.png" alt="" />Twitter</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Reviews</a></li>
+         </ul>
+      </nav>
+      <nav class="verticalNavigation">
+         <h1>Car Accsesories</h1>
+         <ul>
+            <li><a href="#">Engine Oil</a></li>
+            <li><a href="#">Wiper Fluied</a></li>
+            <li><a href="#">Car Mats</a></li>
+            
+         </ul>
+      </nav>
+      <nav class="verticalNavigation">
+         <h1>Dealer Services</h1>
+         <ul>
+            <li><a href="#">Leasing</a></li>
+            <li><a href="#">Car Cleaning</a></li>
+            <li><a href="#">Track Order</a></li>
+            <li><a href="#">Deilvery</a></li>
+            <li><a href="#">Paint Jobs</a></li>
+         </ul>
+      </nav>
+      <section id="contactInfo">
+         <h1>Dealership Location</h1>
+         <address>Al Matar St <br />
+            C Ring Road<br />
+            Doha, Qatar </address>
+      </section>
+   </footer>
+
+
+
+   
+</body>
+</html>
+
+
+
+
+<script>
+   function toggleContactFields() {
+       var emailField = document.getElementById("emailField");
+       var phoneField = document.getElementById("phoneField");
+       var phoneInput = document.getElementById("phone");
+
+       if (document.getElementById("emailRadio").checked) {
+           emailField.style.display = "block";
+           phoneField.style.display = "none";
+       } else if (document.getElementById("phoneRadio").checked) {
+           emailField.style.display = "none";
+           phoneField.style.display = "block";
+           phoneInput.value = "+974";
+       }
+   }
+
+   function validateForm() {
+       var nameField = document.getElementById("name");
+       var messageField = document.getElementById("message");
+       var emailRadio = document.getElementById("emailRadio");
+       var emailField = document.getElementById("email");
+       var phoneRadio = document.getElementById("phoneRadio");
+       var phoneField = document.getElementById("phone");
+
+       
+       if (nameField.value.trim() === "") {
+           alert("Please enter your name.");
+           return false; 
+       }
+       if (messageField.value.trim() === "") {
+           alert("Please enter your message.");
+           return false; 
+       }
+       if (!emailRadio.checked && !phoneRadio.checked) {
+           alert("Please choose a contact method.");
+           return false; 
+       }
+
+       
+       if (emailRadio.checked) {
+           if (emailField.value.trim() === "") {
+               alert("Please enter your email address.");
+               return false; 
+           }
+           if (!emailField.value.includes('@')) {
+               alert("Please Include the '@' symbol in your email");
+               return false; 
+           }
+
+           if (!emailField.value.endsWith('.com')) {
+           alert("Your email address needs to end with '.com'");
+           return false; 
+       }
+       }
+
+       
+       if (phoneRadio.checked) {
+        if (phoneField.value.trim() === "") {
+            alert("Please enter your phone number.");
+            return false; 
+        }
+        if (!phoneField.value.startsWith('+974')) {
+            alert("Please enter a valid phone numebr (Needs the Qatari county code)");
+            return false; 
+        }
+        if (!/^\+974\d{8}$/.test(phoneField.value)) {
+            alert("your phone number needs to be 8 numbers.");
+            return false; 
+        }
+    }
+
+       return true; 
+   }
+</script>
+
+
